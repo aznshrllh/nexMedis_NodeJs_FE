@@ -33,7 +33,7 @@ This frontend application requires the backend server to be running. You can fin
 1. Clone this repository:
 
    ```
-   git clone <repository-url>
+   git clone https://github.com/aznshrllh/nexMedis_NodeJs_FE
    ```
 
 2. Navigate to the project directory:
