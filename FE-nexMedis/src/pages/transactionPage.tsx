@@ -111,6 +111,7 @@ export default function TransactionPage() {
     setError(null);
     try {
       const response = await axios.get<Transaction[]>("/api/transactions");
+      console.log("Transactions response:", response.data);
       setTransactions(response.data);
     } catch (err) {
       console.error("Error fetching transactions:", err);
