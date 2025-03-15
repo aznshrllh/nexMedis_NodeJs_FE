@@ -58,40 +58,37 @@ export function Navbar() {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <Link to="/">
-                      <NavigationMenuLink
-                        className={navigationMenuTriggerStyle()}
-                      >
-                        Home
-                      </NavigationMenuLink>
-                    </Link>
+                    {/* FIX: Use asChild prop to prevent nested <a> tags */}
+                    <NavigationMenuLink
+                      asChild
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      <Link to="/">Home</Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link to="/products">
-                      <NavigationMenuLink
-                        className={navigationMenuTriggerStyle()}
-                      >
-                        Products
-                      </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuLink
+                      asChild
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      <Link to="/products">Products</Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link to="/transactions">
-                      <NavigationMenuLink
-                        className={navigationMenuTriggerStyle()}
-                      >
-                        Transactions
-                      </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuLink
+                      asChild
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      <Link to="/transactions">Transactions</Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link to="/top-buyer">
-                      <NavigationMenuLink
-                        className={navigationMenuTriggerStyle()}
-                      >
-                        Top Buyers
-                      </NavigationMenuLink>
-                    </Link>
+                    <NavigationMenuLink
+                      asChild
+                      className={navigationMenuTriggerStyle()}
+                    >
+                      <Link to="/top-buyer">Top Buyers</Link>
+                    </NavigationMenuLink>
                   </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
