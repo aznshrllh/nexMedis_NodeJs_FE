@@ -153,13 +153,13 @@ export default function CartPage() {
 
       // Redirect to success page or show payment info
       if (response.data.payment && response.data.payment.redirect_url) {
-        // Option 1: Redirect to Midtrans payment page
-        window.location.href = response.data.payment.redirect_url;
+        // Open payment page in new tab/window
+        window.open(response.data.payment.redirect_url, "_blank");
 
-        // Option 2: Show success and navigate to transactions
-        // setTimeout(() => {
-        //   navigate("/transactions");
-        // }, 1500);
+        // Navigate to transactions page after small delay
+        setTimeout(() => {
+          navigate("/transactions");
+        }, 1500);
       }
     } catch (err: Error | unknown) {
       let errorMessage = "Checkout failed. Please try again.";
