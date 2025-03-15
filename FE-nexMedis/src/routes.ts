@@ -3,6 +3,11 @@ import React from "react";
 import MainPage from "./pages/mainPage";
 import LoginPage from "./pages/loginPage";
 import RegisterPage from "./pages/registerPage";
+import HomePage from "./pages/homePage";
+import ProductPage from "./pages/productPage";
+import CartPage from "./pages/cartPage";
+import TransactionPage from "./pages/transactionPage";
+import UserPage from "./pages/UserPage";
 
 const router = createBrowserRouter([
   {
@@ -17,27 +22,23 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: React.createElement(""),
-      },
-      {
-        path: "dashboard",
-        element: React.createElement(""),
+        element: React.createElement(HomePage),
       },
       {
         path: "products",
-        element: React.createElement(""),
+        element: React.createElement(ProductPage),
       },
       {
         path: "carts",
-        element: React.createElement(""),
+        element: React.createElement(CartPage),
       },
       {
         path: "transactions",
-        element: React.createElement(""),
+        element: React.createElement(TransactionPage),
       },
       {
         path: "top-buyer",
-        element: React.createElement(""),
+        element: React.createElement(UserPage),
       },
     ],
   },
